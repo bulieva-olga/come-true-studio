@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0A0A0A;
+  color: #E0E0E0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Header шапка с меню */
+.header .navbar {
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+.header .navbar.scrolled {
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(151, 188, 98, 0.2);
+  padding: 12px 0;
+}
+.header .navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.header .navbar-brand .brand-icon {
+  color: #97BC62;
+  margin-right: 6px;
+}
+.header .navbar-brand .brand-studio {
+  color: #97BC62;
+}
+.header .nav-link {
+  color: #E0E0E0;
+  font-weight: 500;
+  margin: 0 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header .nav-link:hover, .header .nav-link.active {
+  color: #97BC62;
+}
+.header .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom;
+}
