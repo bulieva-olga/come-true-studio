@@ -597,44 +597,49 @@ section {
 
 @media (max-width: 767px) {
 
-  /* ----- КАРТОЧКИ ПРОЕКТОВ: каждая на всю ширину ----- */
+  /* Проекты — каждая карточка на всю ширину */
   .projects-section .row {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: block !important;
   }
 
   .projects-section .col-md-6 {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    margin-bottom: 24px;
   }
 
   .project-card {
-    width: 100%;
-    margin: 0;
+    width: 100% !important;
   }
 
   .project-card .project-img {
     height: 220px;
   }
 
-  /* ----- УСЛУГИ: каждая на всю ширину ----- */
+  /* Услуги — каждая карточка на всю ширину */
   .services-section .row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: block !important;
   }
 
   .services-section .col-md-6,
   .services-section .col-lg-3 {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    margin-bottom: 24px;
   }
 
   .service-card {
-    width: 100%;
-    margin: 0;
+    width: 100% !important;
   }
 }
+/*проверка*/
+@media (max-width: 767px) {
+  .projects-section .col-md-6,
+  .services-section .col-md-6,
+  .services-section .col-lg-3 {
+    background: red !important;
+  }
+}
+
