@@ -625,3 +625,26 @@ section {
   }
 }
 
+/* ПЕРЕОПРЕДЕЛЕНИЕ СЕТКИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+@media (max-width: 768px) {
+  /* Проекты: каждая карточка на всю ширину */
+  .projects-section .row {
+    flex-direction: column !important;
+  }
+  .projects-section .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  
+  /* Услуги: каждая карточка на всю ширину */
+  .services-section .row {
+    flex-direction: column !important;
+  }
+  .services-section .col-md-6,
+  .services-section .col-lg-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+}
