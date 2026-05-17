@@ -590,3 +590,51 @@ section {
     height: 300px;
   }
 }
+
+/* ========================================
+   ПОЛНАЯ ШИРИНА КАРТОЧЕК НА ТЕЛЕФОНАХ
+   ======================================== */
+
+@media (max-width: 767px) {
+
+  /* ----- КАРТОЧКИ ПРОЕКТОВ: каждая на всю ширину ----- */
+  .projects-section .row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .projects-section .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .project-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-card .project-img {
+    height: 220px;
+  }
+
+  /* ----- УСЛУГИ: каждая на всю ширину ----- */
+  .services-section .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .services-section .col-md-6,
+  .services-section .col-lg-3 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .service-card {
+    width: 100%;
+    margin: 0;
+  }
+}
