@@ -168,10 +168,7 @@ section {
     position: relative;
     z-index: 2;
 }
-.hero-section .container {
-  position: relative;
-  z-index: 1;
-}
+
 .hero-section .hero-badge {
   display: inline-block;
   background: rgba(151, 188, 98, 0.15);
@@ -253,7 +250,7 @@ section {
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
-  height: 500px;
+  min-height: 500px;
 }
 .project-card:hover {
   transform: translateY(-10px);
@@ -491,6 +488,7 @@ section {
   transform: translateY(0);
 }
 
+
 /* ========================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (ТОЛЬКО ДЛЯ ТЕЛЕФОНОВ)
    ======================================== */
@@ -591,60 +589,43 @@ section {
   }
 }
 
-/* ========================================
-   ПОЛНАЯ ШИРИНА КАРТОЧЕК НА ТЕЛЕФОНАХ
-   ======================================== */
-
 @media (max-width: 767px) {
 
-  /* Проекты — принудительно в столбик */
-  .projects-section .row {
-    display: flex !important;
-    flex-direction: column !important;
+  /* Карточки проектов */
+  .projects-section .col-md-6,
+  .projects-section .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
-  .projects-section .col-md-6 {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-    margin-bottom: 24px !important;
-  }
-
-  /* Услуги — принудительно в столбик */
-  .services-section .row {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
+  /* Карточки услуг */
   .services-section .col-md-6,
   .services-section .col-lg-3 {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-    margin-bottom: 24px !important;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .project-card,
+  .service-card {
+    width: 100%;
+    height: auto;
   }
 }
 
-/* ПЕРЕОПРЕДЕЛЕНИЕ СЕТКИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
-@media (max-width: 768px) {
-  /* Проекты: каждая карточка на всю ширину */
-  .projects-section .row {
-    flex-direction: column !important;
-  }
-  .projects-section .col-md-6 {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 24px !important;
-  }
-  
-  /* Услуги: каждая карточка на всю ширину */
+@media (max-width: 767px) {
+
+  .projects-section .row,
   .services-section .row {
-    flex-direction: column !important;
+    display: block !important;
   }
-  .services-section .col-md-6,
-  .services-section .col-lg-3 {
-    flex: 0 0 100% !important;
+
+  .projects-section [class*="col-"],
+  .services-section [class*="col-"] {
+    width: 100% !important;
     max-width: 100% !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 24px;
   }
+
 }
